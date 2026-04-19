@@ -26,12 +26,11 @@
     },
   ];
 
-  // Step 4 — same text, styled at explicit sizes, shown via auto-advance
+  // Step 4 — same text/style as step 3, shown via auto-advance
   const step4 = {
+    size: 'section-title',
     title: 'Overall, screenings among boys ages 0–12 exceed those of girls by more than 100%.',
-    titleSize: '30px',
-    subtext: 'This raises an important question: why might early identification differ between sexes?',
-    subtextSize: '24px'
+    subtext: 'This raises an important question: why might early identification differ between sexes?'
   };
 
   const allSteps = [...steps, step4];
@@ -78,15 +77,9 @@
     {#snippet text(_, __)}
       {@const step = allSteps[displayStep]}
       <div class="text-block">
-        <p
-          class={step.size ?? ''}
-          style={step.titleSize ? `font-size:${step.titleSize}; font-family:var(--font-headline); font-weight:var(--weight-semibold);` : ''}
-        >{step.title}</p>
+        <p class={step.size ?? ''}>{step.title}</p>
         {#if step.subtext}
-          <p
-            class={step.titleSize ? '' : 'body-lg'}
-            style={step.subtextSize ? `font-size:${step.subtextSize}` : ''}
-          >{step.subtext}</p>
+          <p class="body-lg">{step.subtext}</p>
         {/if}
       </div>
     {/snippet}

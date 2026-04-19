@@ -1,4 +1,5 @@
 <script>
+  import SectionCover from '$lib/components/SectionCover.svelte';
   import SectionA from '$lib/components/SectionA.svelte';
   import SectionB from '$lib/components/SectionB.svelte';
   import SectionC from '$lib/components/SectionC.svelte';
@@ -12,6 +13,7 @@
 </script>
 
 <main>
+  <SectionCover />
   <SectionA />
   <SectionB />
   <SectionC />

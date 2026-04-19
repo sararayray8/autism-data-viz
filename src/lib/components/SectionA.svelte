@@ -109,12 +109,14 @@
   }
 
   .avatar-wrap {
+    --avatar-size: 170px;
+    --avatar-gap: 28px;
     position: relative;
-    width: 170px;
-    height: 170px;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
     flex-shrink: 0;
     overflow: hidden;
-    margin-right: 28px;
+    margin-right: var(--avatar-gap);
   }
 
   .avatar-wrap:last-child { margin-right: 0; }
@@ -137,8 +139,8 @@
   }
 
   .avatar-wrap.persistent img {
-    width: 170px;
-    height: 170px;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
     object-fit: contain;
     display: block;
   }
@@ -172,21 +174,15 @@
   }
 
   @keyframes wrapCollapse {
-    0%, 50%  { width: 170px; margin-right: 28px; }
-    100%     { width: 0;     margin-right: 0;    }
+    0%, 50%  { width: var(--avatar-size); margin-right: var(--avatar-gap); }
+    100%     { width: 0;                  margin-right: 0;                  }
   }
 
-  /* ── Mobile: keep sticky scroll, just scale avatars down ── */
+  /* ── Mobile: override custom properties so animation uses correct sizes ── */
   @media (max-width: 767px) {
     .avatar-wrap {
-      width: clamp(60px, 18vw, 130px);
-      height: clamp(60px, 18vw, 130px);
-      margin-right: 12px;
-    }
-
-    .avatar-wrap.persistent img {
-      width: clamp(60px, 18vw, 130px);
-      height: clamp(60px, 18vw, 130px);
+      --avatar-size: clamp(60px, 18vw, 130px);
+      --avatar-gap: 12px;
     }
   }
 </style>
