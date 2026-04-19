@@ -10,7 +10,7 @@
   ];
 
   const steps = [
-    { size: 'section-title', title: 'Autism traits show differently across sexes.' },
+    { size: 'section-title', title: 'Autism traits show differently across genders.' },
     { size: 'section-title', title: "There are 'core' neurological traits that are present in both genders." },
     { size: 'section-title', title: 'However, there are some subtle differences across the questions.' },
     { size: 'section-title', title: 'Boys are mostly flagged for challenges with social cues, empathy, and unusual first words.' },

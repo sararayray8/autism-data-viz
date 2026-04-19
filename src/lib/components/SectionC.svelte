@@ -22,7 +22,7 @@
     {
       size: 'section-title',
       title: 'Overall, screenings among boys ages 0–12 exceed those of girls by more than 100%.',
-      subtext: 'This raises an important question: why might early identification differ between sexes?'
+      subtext: 'This raises an important question: why might early identification differ between genders?'
     },
   ];
 
@@ -30,7 +30,7 @@
   const step4 = {
     size: 'section-title',
     title: 'Overall, screenings among boys ages 0–12 exceed those of girls by more than 100%.',
-    subtext: 'This raises an important question: why might early identification differ between sexes?'
+    subtext: 'This raises an important question: why might early identification differ between genders?'
   };
 
   const allSteps = [...steps, step4];
