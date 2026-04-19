@@ -22,7 +22,7 @@
 <div id="cover" class="cover-outer" bind:this={outerEl}>
   <div class="cover-sticky" style="opacity: {opacity}">
     <h1 class="cover-title">Autism Is Not One Size Fits All: How Gender Affects Detection</h1>
-    <p class="cover-author">Sara Spencer</p>
+    <p class="cover-author">Sara Spencer | April 2026</p>
   </div>
 </div>
 
@@ -60,4 +60,5 @@
     font-weight: 500;
     color: var(--color-muted);
   }
+
 </style>
