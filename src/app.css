@@ -1,0 +1,149 @@
+/* ============================================================
+   DESIGN SYSTEM — DO NOT MODIFY WITHOUT DESIGN SIGN-OFF
+   Desktop reference: 1440px | Left/right margins: 226px
+   ============================================================ */
+
+/* --- Google Fonts import for Nunito (SF Pro Rounded fallback) --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Inclusive+Sans&display=swap');
+
+/* --- CSS Custom Properties --- */
+:root {
+  /* Colors */
+  --color-bg:           #F7F2EE;
+  --color-text:         #000A55;
+  --color-muted:        #8a8a99;
+  --color-female:       #E186C2;
+  --color-male:         #6AAFD1;
+  --color-female-light: #EAB2D7;
+  --color-male-light:   #AAD0E3;
+  --color-grey-chart:   #E5E4E2;
+
+  /* Typography */
+  --font-headline:  'SF Pro Rounded', 'Nunito', sans-serif;
+  --font-body:      'Inclusive Sans', sans-serif;
+
+  --size-headline:       30px;
+  --size-section-title:  30px;
+  --size-body-lg:        24px;
+  --size-body-sm:        18px;
+  --size-caption:        16px;
+
+  --weight-semibold: 600;
+  --weight-regular:  400;
+
+  /* Layout */
+  --page-max-width: 1440px;
+  --margin-outer:   226px;
+
+  /* Spacing */
+  --gap-title-body: 12px;
+}
+
+/* ── Responsive: tablet ────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --margin-outer:        40px;
+    --size-headline:       28px;
+    --size-section-title:  24px;
+    --size-body-lg:        20px;
+  }
+}
+
+/* ── Responsive: mobile ────────────────────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    --margin-outer:        16px;
+    --size-headline:       24px;
+    --size-section-title:  20px;
+    --size-body-lg:        18px;
+  }
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--size-body-sm);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Layout Utilities --- */
+
+/*
+  Section shell — full viewport height, centers its inner column.
+  min-height so content-heavy sections (e.g. SectionF) can grow past 100vh.
+*/
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*
+  Inner column — full width up to the page max, with symmetric padding
+  creating the 226px margins. --margin-outer scales down at breakpoints
+  so padding adapts automatically on tablet and mobile.
+*/
+.section__inner {
+  width: 100%;
+  max-width: var(--page-max-width);
+  padding-inline: var(--margin-outer);
+}
+
+/* --- Typography Utilities --- */
+.headline {
+  font-family: var(--font-headline);
+  font-size: var(--size-headline);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+}
+
+.section-title {
+  font-family: var(--font-headline);
+  font-size: var(--size-section-title);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--gap-title-body);
+}
+
+.body-lg {
+  font-family: var(--font-body);
+  font-size: var(--size-body-lg);
+  font-weight: var(--weight-regular);
+}
+
+.body-sm {
+  font-family: var(--font-body);
+  font-size: var(--size-body-sm);
+  font-weight: var(--weight-regular);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--size-caption);
+  color: var(--color-muted);
+}
+
+/* --- Color Utilities --- */
+.text-female       { color: var(--color-female); }
+.text-male         { color: var(--color-male); }
+.text-muted        { color: var(--color-muted); }
+.fill-female       { fill: var(--color-female); }
+.fill-male         { fill: var(--color-male); }
+.fill-female-light { fill: var(--color-female-light); }
+.fill-male-light   { fill: var(--color-male-light); }
+.fill-grey-chart   { fill: var(--color-grey-chart); }
